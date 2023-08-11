@@ -1,16 +1,12 @@
 repeat wait() until game:IsLoaded()
 queue_on_teleport([[loadstring(game:HttpGet("https://raw.githubusercontent.com/lol-312/printhewwoworld1/main/123",true))()]])
-local mt = getrawmetatable(game)
-local nm = mt.__namecall
-setreadonly(mt,false)
-mt.__namecall = newcclosure(function(self,...)
-    if getnamecallmethod() == 'Kick' or getnamecallmethod() == 'kick' then
-while true do wait(2)
-game:GetService("TeleportService"):TeleportToPlaceInstance(game.PlaceId, game:GetService("Players").LocalPlayer)
-end
-    end
-
-    return nm(self,...)
+game.CoreGui.RobloxPromptGui.promptOverlay.ChildAdded:Connect(function(child)
+   if child.Name == "ErrorPrompt" then
+  game:GetService("TeleportService"):Teleport(game.PlaceId, game.Players.LocalPlayer)
+   while true do wait(5)
+game:GetService("TeleportService"):Teleport(game.PlaceId, game.Players.LocalPlayer)
+       end
+   end
 end)
 game:GetService("RunService").Heartbeat:Connect(function()
 firetouchinterest(game.Players.LocalPlayer.Character.HumanoidRootPart, workspace.Teleporters:GetChildren()[8].Touch, 0)
