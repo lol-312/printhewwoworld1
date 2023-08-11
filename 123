@@ -5,9 +5,9 @@ local nm = mt.__namecall
 setreadonly(mt,false)
 mt.__namecall = newcclosure(function(self,...)
     if getnamecallmethod() == 'Kick' or getnamecallmethod() == 'kick' then
-        game:GetService("RunService").Heartbeat:Connect(function()
+while true do wait(2)
 game:GetService("TeleportService"):TeleportToPlaceInstance(game.PlaceId, game:GetService("Players").LocalPlayer)
-end)
+end
     end
 
     return nm(self,...)
