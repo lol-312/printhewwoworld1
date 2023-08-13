@@ -27,3 +27,7 @@ local ohTable2 = {
 
 game:GetService("ReplicatedStorage").Resource.Remote.GameModeVote:FireServer(ohString1, ohTable2)
 end)
+wait(2)
+for i,v in pairs(getconnections(game:GetService("Players").LocalPlayer.Idled)) do
+   v:Disable()
+end
