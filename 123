@@ -9,9 +9,9 @@ game:GetService("TeleportService"):Teleport(game.PlaceId, game.Players.LocalPlay
    end
 end)
 game:GetService("RunService").Heartbeat:Connect(function()
-firetouchinterest(game.Players.LocalPlayer.Character.HumanoidRootPart, workspace.Teleporters:GetChildren()[8].Touch, 0)
+firetouchinterest(game.Players.LocalPlayer.Character.HumanoidRootPart, workspace.Teleporters:GetChildren()[9].Touch, 0)
 wait()
-firetouchinterest(game.Players.LocalPlayer.Character.HumanoidRootPart, workspace.Teleporters:GetChildren()[8].Touch, 1)
+firetouchinterest(game.Players.LocalPlayer.Character.HumanoidRootPart, workspace.Teleporters:GetChildren()[9].Touch, 1)
 end) game:GetService("RunService").Heartbeat:Connect(function(re)
 game:GetService("ReplicatedStorage").Resource.Remote.SkipVote:FireServer()
 local ohString1 = "Vote"
