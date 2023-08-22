@@ -8,15 +8,6 @@ game:GetService("TeleportService"):Teleport(game.PlaceId, game.Players.LocalPlay
        end
    end
 end)
-function hah()
-while wait() do
-      pcall(function()
-game.Players.LocalPlayer.Character:WaitForChild("Overhead")
-game.Players.LocalPlayer.Character.Overhead:Destroy()
-task.wait(10)
-end)
-end
-end
 if game:GetService("Players").LocalPlayer.PlayerGui.Main ~= nil then
     game:GetService("RunService").Heartbeat:Connect(function()
 game:GetService("ReplicatedStorage").Resource.Remote.SkipVote:FireServer()
@@ -39,6 +30,15 @@ firetouchinterest(game.Players.LocalPlayer.Character.HumanoidRootPart, workspace
 wait()
 firetouchinterest(game.Players.LocalPlayer.Character.HumanoidRootPart, workspace.Teleporters:GetChildren()[9].Touch, 1)
 end) 
+end
+function hah()
+while wait() do
+      pcall(function()
+game.Players.LocalPlayer.Character:WaitForChild("Overhead")
+game.Players.LocalPlayer.Character.Overhead:Destroy()
+task.wait(10)
+end)
+end
 end
 hah()
 wait(2)
