@@ -8,13 +8,17 @@ game:GetService("TeleportService"):Teleport(game.PlaceId, game.Players.LocalPlay
        end
    end
 end)
-game:GetService("RunService").Heartbeat:Connect(function()
-firetouchinterest(game.Players.LocalPlayer.Character.HumanoidRootPart, workspace.Teleporters:GetChildren()[9].Touch, 0)
-wait()
-firetouchinterest(game.Players.LocalPlayer.Character.HumanoidRootPart, workspace.Teleporters:GetChildren()[9].Touch, 1)
-workspace.RostoMan4uk.Overhead:Destroy()
-end) 
-game:GetService("RunService").Heartbeat:Connect(function()
+function hah()
+while wait() do
+      pcall(function()
+game.Players.LocalPlayer.Character:WaitForChild("Overhead")
+game.Players.LocalPlayer.Character.Overhead:Destroy()
+task.wait(10)
+end)
+end
+end
+if game:GetService("Players").LocalPlayer.PlayerGui.Main ~= nil then
+    game:GetService("RunService").Heartbeat:Connect(function()
 game:GetService("ReplicatedStorage").Resource.Remote.SkipVote:FireServer()
 local ohString1 = "Vote"
 local ohTable2 = {
@@ -29,6 +33,14 @@ local ohTable2 = {
 
 game:GetService("ReplicatedStorage").Resource.Remote.GameModeVote:FireServer(ohString1, ohTable2)
 end)
+else
+game:GetService("RunService").Heartbeat:Connect(function()
+firetouchinterest(game.Players.LocalPlayer.Character.HumanoidRootPart, workspace.Teleporters:GetChildren()[9].Touch, 0)
+wait()
+firetouchinterest(game.Players.LocalPlayer.Character.HumanoidRootPart, workspace.Teleporters:GetChildren()[9].Touch, 1)
+end) 
+end
+hah()
 wait(2)
 for i,v in pairs(getconnections(game:GetService("Players").LocalPlayer.Idled)) do
    v:Disable()
