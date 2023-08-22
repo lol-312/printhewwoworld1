@@ -8,7 +8,7 @@ game:GetService("TeleportService"):Teleport(game.PlaceId, game.Players.LocalPlay
        end
    end
 end)
-if game:GetService("Players").LocalPlayer.PlayerGui.Main == nil then
+if game:GetService("Players").LocalPlayer.PlayerGui.Freecam == nil then
     game:GetService("RunService").Heartbeat:Connect(function()
 game:GetService("ReplicatedStorage").Resource.Remote.SkipVote:FireServer()
 local ohString1 = "Vote"
