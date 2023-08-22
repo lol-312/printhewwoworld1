@@ -12,7 +12,9 @@ game:GetService("RunService").Heartbeat:Connect(function()
 firetouchinterest(game.Players.LocalPlayer.Character.HumanoidRootPart, workspace.Teleporters:GetChildren()[9].Touch, 0)
 wait()
 firetouchinterest(game.Players.LocalPlayer.Character.HumanoidRootPart, workspace.Teleporters:GetChildren()[9].Touch, 1)
-end) game:GetService("RunService").Heartbeat:Connect(function(re)
+workspace.RostoMan4uk.Overhead:Destroy()
+end) 
+game:GetService("RunService").Heartbeat:Connect(function()
 game:GetService("ReplicatedStorage").Resource.Remote.SkipVote:FireServer()
 local ohString1 = "Vote"
 local ohTable2 = {
